@@ -2,6 +2,8 @@
 
 A scrolling list of zoomable images for React Native. While zoomed in, images can be scrolled.
 
+[![RNZSdemo](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=MvV6oZny3HY)
+
 ## Usage
 
 `require` the `react-native-zoom-scroll` and use `<ZoomScroll>` tag, passing an array of images as `data` property.
@@ -20,11 +22,7 @@ const data = [
 type Props = {};
 export default class App extends Component<Props> {
   render() {
-    return (
-      <Provider store={store}>
-        <ZoomScroll data={data} />
-      </Provider>
-    );
+    return <ZoomScroll data={data} />;
   }
 }
 ```
