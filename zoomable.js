@@ -9,7 +9,7 @@ import {
   adjustScaleIfNearMaxOrMin,
 } from './helpers';
 
-export default class PinchZoomView extends Component {
+export default class Zoomable extends Component {
   static propTypes = {
     scalable: PropTypes.bool,
     enableScroll: PropTypes.func.isRequired,
@@ -76,7 +76,7 @@ export default class PinchZoomView extends Component {
 
   _handlePanResponderMove = (e, gestureState) => {
     if (gestureState.numberActiveTouches === 2) {
-      let scale = adjustScaleIfNearMaxOrMin(
+      const scale = adjustScaleIfNearMaxOrMin(
         (calculatePinchEventHypotenuse(e) / this.distance) * this.state.lastScale, // Current scale of the movement.
         this.props.maxScale,
         this.props.minScale
@@ -92,12 +92,12 @@ export default class PinchZoomView extends Component {
     if (this.state.scale > this.props.minScale && gestureState.numberActiveTouches === 1) {
       if (this.state.lastMovePinch) gestureState.dx = gestureState.dy = 0;
 
-      let offsetX = limitScrolling(
+      const offsetX = limitScrolling(
         this.state.lastX + gestureState.dx / this.state.scale,
         Dimensions.get('screen').width,
         this.state.scale
       );
-      let offsetY = limitScrolling(
+      const offsetY = limitScrolling(
         this.state.lastY + gestureState.dy / this.state.scale,
         Dimensions.get('screen').height,
         this.state.scale

@@ -2,7 +2,7 @@ import { Animated } from 'react-native';
 
 export const limitScrolling = (offset, screenDimension, scale) => {
   let offsetLimit = ((screenDimension * scale - screenDimension) * 0.5) / scale;
-  return offset > offsetLimit ? offsetLimit : -offset >= offsetLimit ? -offsetLimit : offset;
+  return offset >= offsetLimit ? offsetLimit : -offset >= offsetLimit ? -offsetLimit : offset;
 };
 
 export const scrollToMiddleIfZoomOut = (scale, lastScale, translateAnimation) => {
