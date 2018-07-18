@@ -2,7 +2,7 @@
 
 A scrolling list of zoomable images for React Native. While zoomed in, images can be scrolled.
 
-[![RNZSdemo](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=MvV6oZny3HY)
+[![RNZS demo](https://img.youtube.com/vi/MvV6oZny3HY/0.jpg)](https://www.youtube.com/watch?v=MvV6oZny3HY)
 
 ## Usage
 
